@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*@Keyframes需要配合animation使用才能创建动画*/
+        /*@keyframes name{ 0%{ transform:translateZ; } 100%{ transform:translateZ{180px} } animation:name 10s ease .1s infinite; Transition也可以创建动画*/
+
+        div#box{
+            width: 100%;
+            overflow: hidden;
+            height: 670px;
+        }
+        div .div1,div .div2,div .div3{
+            width: 120px;
+            height: 120px;
+            float: left;
+            line-height: 120px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 1.4rem;
+            margin-left: 40px;
+        }
+        div .div1{
+            background-color: plum;
+            color: darkorange;
+        }
+        div .div2{
+            background-color: lightblue;
+            color: darkorange;
+        }
+        div .div3{
+            background-color: lemonchiffon;
+            color: darkorange;
+        }
+
+        @keyframes move-h1{
+            0% {transform: rotate(0deg); color: blue;top:100px;}
+            50% {transform: rotate(180deg); color: orange;top:200px; }
+            100% {transform: rotate(360deg); color: blue;top:440px; }
+
+        }
+        .class{
+            /*animation: move-h1 10.5s ease-in-out  forwards*/
+            /*margin-top: 10%;*/
+            position: relative;
+        }
+        /*当动画完成后，保持最后一个属性值 */
+        /*animation: quan 3s infinite linear;*/
+        .div1{
+            animation: move-h1 4s linear infinite;
+        }
+        .div2{
+            animation: move-h1 4s ease-in-out 2s infinite;
+        }
+        .div3{
+            /*animation: move-h1 4s ease-in infinite;*/
+            animation: move-h1 4s ease-out 1s infinite;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="class div1">alice</div>
+    <div class="class div2">prime</div>
+    <div class="class div3">emma</div>
+    <div class="class div1">trl</div>
+    <div class="class div3">tom</div>
+    <div class="class div2">ease</div>
+    <div class="class div1">box</div>
+</div>
+
+
+
+
+<script>
+    // console.log();
+    // 'foo' === new function(){
+    //     return new String('foo');
+    // };
+    // console.log('foo');
+    //
+    // console.log([] == 0);
+    //
+    // console.log(![]);
+    // !0
+    // console.log(!0);
+    //
+    // var i = 0;
+    // while( i < 40 ){
+    //     if( i < 30 )
+    //         continue;
+    //     document.write('########');
+    //     i++;
+    // }
+</script>
+</body>
+</html>
